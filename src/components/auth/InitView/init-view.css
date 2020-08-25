@@ -1,0 +1,23 @@
+.init-view{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.text-logo{
+    font-size: 20px;
+    font-weight: 600;
+    color:#2F5A62;
+}
+
+.text-login{
+    color:#2F5A62;
+}
+
+.login-opt-containe{
+    display: flex;
+    align-items: flex-end;
+}
