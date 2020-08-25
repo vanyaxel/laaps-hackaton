@@ -1,0 +1,43 @@
+/* timeline */
+h5{
+    font-weight: 600;
+    margin: 0
+}
+
+h6{
+    font-weight: 600;
+    margin: 0
+}
+
+.MuiTimelineItem-missingOppositeContent:before {
+    content: none !important;
+}
+
+.timeline-container{
+    padding: 40px
+}
+
+
+/* user */
+.user-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.user-text{
+    margin-left: 40px;
+}
+
+/* dashboard */
+.user-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Rating stars */
+.MuiRating-root {
+    color: #13B6AC ;
+}
