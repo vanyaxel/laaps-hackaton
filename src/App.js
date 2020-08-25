@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route, withRouter } from "react-router
 import { auth } from './firebase';
 import Navbar from "./components/Navbar/Navbar";
 import Login from "./components/auth/login";
+import ServiceIndex from "./components/Service/ServiceForm";
 import Profile from "./components/Admin/Profile";
 
 function App(props) {
@@ -34,6 +35,9 @@ function App(props) {
           </Route>
           <Route path='/profile' >
             <Profile />
+          </Route>
+          <Route path='/service' >
+            <ServiceIndex />
           </Route>
         </Switch>
       </div>

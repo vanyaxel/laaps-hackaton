@@ -35,6 +35,9 @@ const Navbar = (props) => {
                         <NavLink to='/profile' exact >
                             <Button variant='contained' color='secondary'>Profile</Button>
                         </NavLink>
+                        <NavLink to='/service' exact >
+                            <Button variant='contained' color='secondary'>Service</Button>
+                        </NavLink>
 
 
                         {
