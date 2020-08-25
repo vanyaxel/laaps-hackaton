@@ -1,0 +1,17 @@
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#root > div > div:nth-child(1) > header > div > button > span.MuiIconButton-label > a{
+    color: #ffffff;
+}
+
+.MuiToolbar-root{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
