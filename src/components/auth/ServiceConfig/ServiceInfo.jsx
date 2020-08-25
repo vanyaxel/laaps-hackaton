@@ -1,5 +1,5 @@
 import React from "react";
-import { auth } from '../../firebase';
+import { auth } from '../../../firebase';
 import { TextField } from "@material-ui/core";
 import Map from "./Map"
 import InfoButton from "./InfoButton";

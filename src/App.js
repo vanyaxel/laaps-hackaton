@@ -2,13 +2,20 @@ import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route, withRouter } from "react-router-dom";
 
 import { auth } from './firebase';
-import Navbar from "./components/Navbar/Navbar";
-import Login from "./components/auth/login";
-import ServiceIndex from "./components/Service/ServiceForm";
-import Profile from "./components/Admin/Profile";
+import { ThemeProvider } from '@material-ui/core/styles';
+import theme from './Theme';
+import './App.css';
+
+import InitView from "./components/auth/InitView/InitView";
+import Login from "./components/auth/Login/Login";
+import Profile from "./components/auth/Profile/Profile";
+import Payment from "./components/auth/Payment/Payment";
+import ServiceForm from './components/auth/ServiceConfig/ServiceForm';
+import Dashboard from "./components/Service/Dashboard";
 
 function App(props) {
 
+  //  const [viewNavbar, setViewNavbar] = useState(false);
   const [firebaseUser, setFirebaseUser] = useState(false);
 
   useEffect(() => {
@@ -23,12 +30,11 @@ function App(props) {
   }, []);
 
   return firebaseUser !== false ? (
-    <Router>
-      <div className="container">
-        <Navbar firebaseUser={firebaseUser} />
+    <ThemeProvider theme={theme}>
+      <Router>
         <Switch>
           <Route exact path='/'>
-            inicio...
+            <InitView />
           </Route>
           <Route path='/login'>
             <Login />
@@ -36,12 +42,18 @@ function App(props) {
           <Route path='/profile' >
             <Profile />
           </Route>
-          <Route path='/service' >
-            <ServiceIndex />
+          <Route path='/payment' >
+            <Payment />
+          </Route>
+          <Route path='/serviceform'>  
+            <ServiceForm />
+          </Route>
+          <Route path='/dashboard' >
+            <Dashboard />
           </Route>
         </Switch>
-      </div>
-    </Router>
+      </Router>
+    </ThemeProvider>
   ) : (
       <p>Cargando...</p>
     );

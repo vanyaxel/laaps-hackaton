@@ -63,11 +63,8 @@ export default function ModalService() {
                     </DialogContentText>
                 </DialogContent>
                 <DialogActions>
-                    <Button onClick={handleClose} color="primary">
-                        Cancelar
-                    </Button>
-                    <Button onClick={handleClose} color="primary" autoFocus>
-                        Guardar
+                    <Button onClick={handleClose} color="secondary" autoFocus>
+                        CONFIRMAR SERVICIO
                      </Button>
                 </DialogActions>
             </Dialog>
