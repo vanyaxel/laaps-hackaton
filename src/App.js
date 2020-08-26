@@ -55,6 +55,9 @@ function App(props) {
           <Route path='/dashboard'>
             <Dashboard />
           </Route>
+          <Route path='/confirm'>
+            <ConfirmPay />
+          </Route>
           <Route path='/specific-service' >
             <SpecificService />
           </Route>
