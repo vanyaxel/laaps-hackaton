@@ -14,7 +14,7 @@ export default class Mapbox extends Component {
         return (
             <ReactMapGL {...viewport}
                 width="100vw"
-                height="100vh"
+                height="40vh"
                 onViewportChange={viewport => this.setState({ viewport })}
                 mapboxApiAccessToken={MAPBOX_TOKEN}>
                 <GeolocateControl
