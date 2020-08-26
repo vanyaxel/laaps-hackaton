@@ -9,7 +9,20 @@ import { Checkbox, FormControlLabel } from '@material-ui/core';
 import CircleUnchecked from '@material-ui/icons/RadioButtonUnchecked';
 import CircleCheckedFilled from '@material-ui/icons/CheckCircle';
 
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles({
+  containaer: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
+
+
 export default function ModalService() {
+  const classes = useStyles();
+
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
@@ -21,24 +34,24 @@ export default function ModalService() {
   };
 
   const dialogStyle = {
-      backgroundColor: '#BCE5DF',
-      display: 'block',
-      alignContent: 'center'
-  }
+    backgroundColor: '#BCE5DF',
+    display: 'block',
+    alignContent: 'center'
+  };
 
   const serviceButton = {
-      width: '70%'
-  }
+    width: '70%'
+  };
 
 
 
   return (
-    <div>
-      <Button 
-      variant="contained" 
-      color="primary"
-      style={serviceButton}
-       onClick={handleClickOpen}>
+    <div className={classes.containaer}>
+      <Button
+        variant="contained"
+        color="secondary"
+        style={serviceButton}
+        onClick={handleClickOpen}>
         Pedir Servicio
       </Button>
       <Dialog
@@ -48,7 +61,7 @@ export default function ModalService() {
         aria-describedby="alert-dialog-description"
       >
         <DialogContent
-        style={dialogStyle}>
+          style={dialogStyle}>
           <DialogContentText id="alert-dialog-description">
             <form noValidate autoComplete="off">
               <p> ¿Alguna solicitud especial? </p>
@@ -87,7 +100,7 @@ export default function ModalService() {
           </DialogContentText>
         </DialogContent>
         <DialogActions
-        style={dialogStyle}>
+          style={dialogStyle}>
           <Button
             onClick={handleClose}
             variant="contained"

@@ -9,10 +9,10 @@ import './App.css';
 import InitView from "./components/auth/InitView/InitView";
 import Login from "./components/auth/Login/Login";
 import Profile from "./components/auth/Profile/Profile";
-import Dashboard from "./components/CurrentService/Dashboard";
+import StatusService from "./components/CurrentService/StatusService/StatusService";
 import Payment from "./components/auth/Payment/Payment";
 import CreditCardView from "./components/auth/Payment/CreditCard";
-import ServiceForm from './components/CurrentService/CurrentService/ServiceForm';
+import Dashboard from './components/CurrentService/CurrentService/Dashboard';
 import Mapbox from './mapbox/Mapbox';
 import PreviousServices from './components/PreviousServices/PreviousServices';
 import SpecificService from "./components/PreviousServices/SpecificService";
@@ -52,8 +52,8 @@ function App(props) {
           <Route path='/creditcard'>
             <CreditCardView />
           </Route>
-          <Route path='/serviceform'>
-            <ServiceForm />
+          <Route path='/dashboard'>
+            <Dashboard />
           </Route>
           <Route path='/specific-service' >
             <SpecificService />
@@ -61,8 +61,8 @@ function App(props) {
           <Route path='/previous-services' >
             <PreviousServices />
           </Route>
-          <Route path='/dashboard' >
-            <Dashboard />
+          <Route path='/statuss-ervice' >
+            <StatusService />
           </Route>
         </Switch>
       </Router>
