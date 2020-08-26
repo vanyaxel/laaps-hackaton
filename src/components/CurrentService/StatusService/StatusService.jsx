@@ -1,7 +1,7 @@
 import React from 'react';
 import CardUser from './CardUser';
 import TimeLineService from './TimeLineService';
-import NavbarDashboad from '../../components/auth/Navbars/NavbarDashboad';
+import NavbarDashboad from '../../auth/Navbars/NavbarDashboad';
 
 import User from './User';
 

@@ -17,18 +17,11 @@ const useStyles = makeStyles({
         height: '50px',
         textTransform: 'uppercase',
         color: '#ffff',
-        fontSize: '16px'
+        fontSize: '16px',
+        margin: '20px',
+
     },
-    view2: {
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'space-evenly',
-        alignItems: 'center',
-        height: '100vh',
-        textAlign: 'center',
-        paddingLeft: '40px',
-        paddingRight: '40px'
-    }
+
 });
 function Profile() {
 
@@ -47,17 +40,17 @@ function Profile() {
 
     return (
         <div >
-
             <div className='init-view'>
                 <div>
                     <img src={logo} alt="logo-laaps" />
                     <p className='text-logo'>La forma eco de lavar tu auto</p>
                 </div>
-                <Link to='/choose-user'>
-                    <Button variant='contained' className={classes.backgroundBtns} onClick={changeView1}>Registrate</Button></Link>
-                <div className='footer'>
-                    <h5>Team Laaps</h5>
-                </div>
+                <Link to='/start'>
+                    <Button variant='contained' className={classes.backgroundBtns} >Usuario</Button>
+                </Link>
+                <Link to='/login-employee'>
+                    <Button variant='contained' className={classes.backgroundBtns} >Lavador</Button>
+                </Link>
             </div>
         </div >
     );
