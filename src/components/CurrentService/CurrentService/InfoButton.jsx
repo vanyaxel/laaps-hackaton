@@ -5,17 +5,11 @@ import "./ServiceInfo.css";
 
 
 const InfoButton = () => {
-    const ValidateService = () => {
 
-    };
     return (
-        <div >
-
-            return (
-            <div className="infos">
-                <p> Tenemos -- lavadores en tu zona </p>
-                <ModalService></ModalService>
-            </div>
+        <div className="infos">
+            <ModalService></ModalService>
+        </div>
     );
 };
 
