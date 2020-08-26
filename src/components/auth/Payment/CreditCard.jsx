@@ -10,6 +10,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import CreditCardIcon from '@material-ui/icons/CreditCard';
 import DateRangeIcon from '@material-ui/icons/DateRange';
 import SecurityIcon from '@material-ui/icons/Security';
+import ArrowBackIos from '@material-ui/icons/ArrowBackIos';
 import './CreditCard.css'
 
 const useStyles = makeStyles((theme) => ({
@@ -26,9 +27,9 @@ const CreditCardView = (props) => {
   return (
     <div>
         <div>
-        <NavbarLogin title="Agregar Tarjeta" view="3/3" link="/payment" />
+        <NavbarLogin title="Agregar Tarjeta" view="3/3" link="/payment" icon={<ArrowBackIos />}/>
         </div>
-        <form className='form-container'>
+        <form className='form-container-profile'>
         <FormControl className={classes.margin}>
         <InputLabel htmlFor="input-with-icon-adornment">No. de tarjeta</InputLabel>
         <Input

@@ -9,6 +9,7 @@ import FormControl from '@material-ui/core/FormControl';
 import { makeStyles } from '@material-ui/core/styles';
 import AccountBoxIcon from '@material-ui/icons/AccountBox';
 import SecurityIcon from '@material-ui/icons/Security';
+import ArrowBackIos from '@material-ui/icons/ArrowBackIos';
 import './CreditCard.css'
 
 const useStyles = makeStyles((theme) => ({
@@ -25,9 +26,9 @@ const Paypal = (props) => {
   return (
     <div>
         <div>
-        <NavbarLogin title="Agregar PayPal" view="3/3" link="/payment" />
+        <NavbarLogin title="Agregar PayPal" view="3/3" link="/payment" icon={<ArrowBackIos />} />
         </div>
-        <form className='form-container'>
+        <form className='form-container-profile'>
       <FormControl className={classes.margin}>
         <InputLabel>Correo PayPal</InputLabel>
         <Input

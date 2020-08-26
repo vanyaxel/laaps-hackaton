@@ -17,7 +17,7 @@ const NavbarLogin = (props) => {
             <AppBar position="static">
                 <Toolbar>
                     <IconButton edge="start" color="secondary" aria-label="menu">
-                        <Link to={props.link} exact><ArrowBackIos /></Link>
+                        <Link to={props.link} exact>{props.icon}</Link>
                     </IconButton>
                     <p>{props.title}</p>
                     <p>{props.view}</p>

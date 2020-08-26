@@ -1,16 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 import { db } from '../../../firebase';
 
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
-
+import Typography from '@material-ui/core/Typography';
 import '../register.css';
-import ModalProfile from './ModalProfile';
+import useStyles from '../styles';
 import NavbarLogin from '../Navbars/NavbarLogin';
+import ArrowBackIos from '@material-ui/icons/ArrowBackIos';
+
 
 
 const Profile = (props) => {
+
+    const classes = useStyles();
 
     const [user, setUser] = useState({
         name: '',
@@ -42,7 +46,7 @@ const Profile = (props) => {
             })
             .then(function () {
                 console.log("Document successfully updated!");
-                props.history.push('/payment');
+                //props.history.push('/payment');
             })
             .catch(function (error) {
                 console.error("Error updating document: ", error);
@@ -51,46 +55,51 @@ const Profile = (props) => {
 
     return (
         <div>
-            <NavbarLogin title='Detalles del auto' view='2/3' link='/login' />
+            <NavbarLogin title='Detalles del auto' view='2/3' link='/login' icon={<ArrowBackIos />} />
             <div>
-                <form onSubmit={handleSubmit} className='form-container'>
+                <form onSubmit={handleSubmit} className='form-container-profile'>
+                    <Typography variant="h6" color="initial" className={classes.label}>Marca</Typography>
                     <TextField
                         id="standard-full-width"
-                        label="Marca del automovil"
                         placeholder="Nissan"
                         InputLabelProps={{
                             shrink: true,
                         }}
                         onChange={handleInputChange}
+                        className={classes.input}
                     />
+                    <Typography variant="h6" color="initial" className={classes.label}>Modelo</Typography>
                     <TextField
                         id="standard-full-width"
-                        label="Modelo automovil"
+
                         placeholder="ej. Sentra 2019"
                         InputLabelProps={{
                             shrink: true,
                         }}
                         onChange={handleInputChange}
+                        className={classes.input}
                     />
+                    <Typography variant="h6" color="initial" className={classes.label}>Placas</Typography>
                     <TextField
                         id="standard-full-width"
-                        label="Número de placa"
                         placeholder="123-ABC"
                         InputLabelProps={{
                             shrink: true,
                         }}
                         onChange={handleInputChange}
+                        className={classes.input}
                     />
+                    <Typography variant="h6" color="initial" className={classes.label}>Color</Typography>
                     <TextField
                         id="standard-full-width"
-                        label="Color"
                         placeholder="Rojo"
                         InputLabelProps={{
                             shrink: true,
                         }}
                         onChange={handleInputChange}
+                        className={classes.input}
                     />
-                    <Button type='submit' variant='contained' color='primary'>Continuar</Button>
+                    <Link to='/payment'><Button type='submit' variant='contained' color='primary' className={classes.btn}>Continuar</Button></Link>
                 </form>
             </div >
         </div>
