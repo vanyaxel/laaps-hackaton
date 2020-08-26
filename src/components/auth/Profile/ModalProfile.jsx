@@ -25,6 +25,8 @@ export default function ModalProfile() {
             <Dialog
                 open={open}
                 onClose={handleClose}
+                variant="contained"
+                bodyStyle={{ backgroundColor: '#BCE5DF' }}
                 aria-labelledby="alert-dialog-title"
                 aria-describedby="alert-dialog-description"
             >
