@@ -23,7 +23,7 @@ import ConfirmPay from './components/CurrentService/CurrentService/ConfirmPay';
 // employee
 import LoginEmployee from "./componentsEmployees/auth/Login/LoginEmployee";
 import DashboardEmployee from './componentsEmployees/Dashboard/DashboardEmployee';
-
+import ServiceActive from './componentsEmployees/Dashboard/ServiceActive';
 function App(props) {
 
   //  const [viewNavbar, setViewNavbar] = useState(false);
@@ -57,6 +57,9 @@ function App(props) {
           </Route>
           <Route path='/dashboard-employee'>
             <DashboardEmployee />
+          </Route>
+          <Route path='/service-active'>
+            <ServiceActive />
           </Route>
 
           {/* usuario */}

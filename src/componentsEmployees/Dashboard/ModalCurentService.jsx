@@ -5,6 +5,8 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
+import { Link } from 'react-router-dom';
+
 import { makeStyles } from '@material-ui/core/styles';
 import car from '../../images/car.png';
 
@@ -152,9 +154,9 @@ Gracias</p>
                     <Button onClick={handleClose} color="primary" className={classes.btnAccept}>
                         Rechazar
                     </Button>
-                    <Button onClick={handleClose} color="primary" autoFocus className={classes.btnDecline}>
+                    <Link to='service-active'><Button onClick={handleClose} color="primary" autoFocus className={classes.btnDecline}>
                         Aceptar
-                    </Button>
+                    </Button></Link>
                     <Button onClick={notification} color="primary" className={classes.btnPetition}>
                         Petición
                     </Button>
