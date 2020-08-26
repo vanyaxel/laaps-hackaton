@@ -9,13 +9,11 @@ import './App.css';
 import InitView from "./components/auth/InitView/InitView";
 import Login from "./components/auth/Login/Login";
 import Profile from "./components/auth/Profile/Profile";
-import Dashboard from "./components/CurrentService/Dashboard";
+import StatusService from "./components/CurrentService/StatusService/StatusService";
 import Payment from "./components/auth/Payment/Payment";
 import CreditCardView from "./components/auth/Payment/CreditCard";
-import Paypal from "./components/auth/Payment/Paypal";
-import ServiceForm from './components/auth/ServiceConfig/ServiceForm';
-import ConfirmPay from './components/auth/ServiceConfig/ConfirmPay'
-import Mapbox from './mapbox/Mapbox';
+import ConfirmPay from "./components/auth/ServiceConfig/ConfirmPay";
+import Dashboard from './components/CurrentService/CurrentService/Dashboard';
 import PreviousServices from './components/PreviousServices/PreviousServices';
 import SpecificService from "./components/PreviousServices/SpecificService";
 
@@ -54,11 +52,8 @@ function App(props) {
           <Route path='/creditcard'>
             <CreditCardView />
           </Route>
-          <Route path='/paypal'>
-            <Paypal />
-          </Route>
-          <Route path='/serviceform'>  
-            <ServiceForm />
+          <Route path='/dashboard'>
+            <Dashboard />
           </Route>
           <Route path='/confirm'>
             <ConfirmPay />
@@ -68,6 +63,9 @@ function App(props) {
           </Route>
           <Route path='/previous-services' >
             <PreviousServices />
+          </Route>
+          <Route path='/statuss-ervice' >
+            <StatusService />
           </Route>
         </Switch>
       </Router>

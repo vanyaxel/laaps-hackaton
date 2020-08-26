@@ -1,76 +1,71 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 import NavbarLogin from '../Navbars/NavbarLogin';
 import Button from '@material-ui/core/Button';
 import InputLabel from '@material-ui/core/InputLabel';
 import Input from '@material-ui/core/Input';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import FormControl from '@material-ui/core/FormControl';
-import { makeStyles } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
 import CreditCardIcon from '@material-ui/icons/CreditCard';
 import DateRangeIcon from '@material-ui/icons/DateRange';
 import SecurityIcon from '@material-ui/icons/Security';
-import ArrowBackIos from '@material-ui/icons/ArrowBackIos';
-import './CreditCard.css'
-
-const useStyles = makeStyles((theme) => ({
-    margin: {
-      margin: theme.spacing(1),
-    },
-  }));
-
+import './CreditCard.css';
+import useStyles from '../styles';
 
 const CreditCardView = (props) => {
 
-    const classes = useStyles();
+  const classes = useStyles();
 
   return (
     <div>
-        <div>
-        <NavbarLogin title="Agregar Tarjeta" view="3/3" link="/payment" icon={<ArrowBackIos />}/>
-        </div>
-        <form className='form-container-profile'>
+      <div>
+        <NavbarLogin title="Agregar Tarjeta" view="3/3" link="/payment" />
+      </div>
+
+      <form className={classes.formPaymentT}>
         <FormControl className={classes.margin}>
-        <InputLabel htmlFor="input-with-icon-adornment">No. de tarjeta</InputLabel>
-        <Input
-          className="numberIn"
+          <Typography variant="h6" color="initial" className={classes.label}>No. de tarjeta</Typography>
+          <Input
+            className="numberIn"
+            type="number"
+            className={classes.inputPayment}
+            startAdornment={
+              <InputAdornment position="start">
+                <CreditCardIcon />
+              </InputAdornment>
+            }
+          />
+        </FormControl>
+        <FormControl className={classes.margin}>
+          <Typography variant="h6" color="initial" className={classes.label}>Fecha de vencimiento</Typography>
+          <Input
+            className={classes.inputPayment}
+            type="number"
+            placeholder="MM/AA"
+            startAdornment={
+              <InputAdornment position="start">
+                <DateRangeIcon />
+              </InputAdornment>
+            }
+          />
+        </FormControl>
+        <FormControl className={classes.margin}>
+          <Typography variant="h6" color="initial" className={classes.label}>Código de seguridad</Typography>
+          <Input
           type="number"
-          startAdornment={
-            <InputAdornment position="start">
-              <CreditCardIcon />
-            </InputAdornment>
-          }
-        />
-      </FormControl>
-      <FormControl className={classes.margin}>
-        <InputLabel>Fecha de vencimiento</InputLabel>
-        <Input
-          className="numberIn"
-          placeholder="MM/AA"
-          type="number"
-          startAdornment={
-            <InputAdornment position="start">
-              <DateRangeIcon />
-            </InputAdornment>
-          }
-        />
-      </FormControl>
-      <FormControl className={classes.margin}>
-        <InputLabel>Código de seguridad</InputLabel>
-        <Input
-          className="numberIn"
-          type="number"
-          startAdornment={
-            <InputAdornment position="start">
-              <SecurityIcon />
-            </InputAdornment>
-          }
-        />
-      </FormControl>
-                    <Button type='submit' variant='contained' color='primary'>Continuar</Button>
-                </form>
-        </ div>
-)
+            className={classes.inputPayment}
+            startAdornment={
+              <InputAdornment position="start">
+                <SecurityIcon />
+              </InputAdornment>
+            }
+          />
+        </FormControl>
+        <Link to='/dashboard'><Button type='submit' variant='contained' color='primary' className={classes.lastBtn}>Registrar</Button></Link>
+      </form>
+    </ div>
+  );
 };
 
 export default withRouter(CreditCardView);
