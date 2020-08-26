@@ -12,7 +12,7 @@ import Profile from "./components/auth/Profile/Profile";
 import Payment from "./components/auth/Payment/Payment";
 import CreditCardView from "./components/auth/Payment/CreditCard";
 import ServiceForm from './components/auth/ServiceConfig/ServiceForm';
-import Dashboard from "./components/Service/Dashboard";
+import Mapbox from './mapbox/Mapbox';
 
 function App(props) {
 
@@ -52,8 +52,8 @@ function App(props) {
           <Route path='/serviceform'>  
             <ServiceForm />
           </Route>
-          <Route path='/dashboard' >
-            <Dashboard />
+          <Route path='/mapbox' >
+            <Mapbox />
           </Route>
         </Switch>
       </Router>

@@ -1,7 +1,7 @@
 import React from "react";
 import { auth } from '../../../firebase';
-import Map from "./Map"
 import InfoButton from "./InfoButton";
+import Mapbox from "../../../mapbox/Mapbox";
 
 const ServiceInfo = () => {
 
@@ -9,9 +9,9 @@ const ServiceInfo = () => {
 
     return (
         <div>
-            <h1 className="userInfo"> Para: {user.displayName}</h1>
+            <h1 className="userInfo"> Para: {user.email}</h1>
        <div>
-       <Map></Map>
+       <Mapbox></Mapbox>
        </div>
        <InfoButton></InfoButton>
         </div>
