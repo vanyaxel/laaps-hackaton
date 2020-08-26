@@ -9,7 +9,7 @@ import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import Avatar from '@material-ui/core/Avatar';
 import RatingEmployee from './RatingEmployee';
-import ArrowForwardIos from '@material-ui/icons/ArrowForwardIos';
+import SpecificService from './SpecificService';
 import './pre-services.css';
 
 
@@ -36,8 +36,11 @@ const useStyles = makeStyles({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between'
+    },
+    textCost: {
+        position: 'relative',
+        left: '10px'
     }
-
 });
 
 function useAllOrder() {
@@ -108,10 +111,10 @@ const PreviousServices = () => {
                                 </Typography>
                                     <div className={classes.ratingContainer} >
                                         <RatingEmployee />
-                                        <Typography gutterBottom variant="body2" component="h4">
+                                        <Typography gutterBottom variant="body2" component="h4" className={classes.textCost}>
                                             $130.00
                                     </Typography>
-                                        <ArrowForwardIos />
+                                        <SpecificService service={service} />
                                     </div>
                                 </CardContent>
                             </CardActionArea>

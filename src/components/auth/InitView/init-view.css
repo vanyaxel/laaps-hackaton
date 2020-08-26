@@ -5,19 +5,39 @@
     align-items: center;
     height: 100vh;
     text-align: center;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),   url(../../../images/fondo-laaps.png);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover; 
 }
 
 .text-logo{
     font-size: 20px;
     font-weight: 600;
-    color:#2F5A62;
+    color:#ffff;
+    margin: 0;
+    position: relative;
+    top: -55px;
 }
 
 .text-login{
-    color:#2F5A62;
+    color:#ffff;
 }
 
 .login-opt-containe{
     display: flex;
     align-items: flex-end;
+}
+
+.footer{
+    background: #BCE5DE;
+    width: 376px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 105px;
 }

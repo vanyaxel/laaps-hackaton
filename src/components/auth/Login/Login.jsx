@@ -6,10 +6,13 @@ import { auth, db } from '../../../firebase';
 import { withRouter } from 'react-router-dom';
 import NavbarLogin from '../Navbars/NavbarLogin';
 import ArrowBackIos from '@material-ui/icons/ArrowBackIos';
+import Typography from '@material-ui/core/Typography';
+import useStyles from '../styles';
 
 import '../register.css';
 
 const Login = (props) => {
+    const classes = useStyles();
 
     const [email, setEmail] = useState('');
     const [name, setName] = useState('');
@@ -107,29 +110,31 @@ const Login = (props) => {
                             </div>
                         )
                     }
+                    <Typography variant="h6" color="initial" className={classes.label}>Nombre</Typography>
                     <TextField
                         id="standard-full-width"
-                        label="Name"
                         placeholder="Escibe aqui tu Nombre"
                         InputLabelProps={{
                             shrink: true,
                         }}
                         onChange={e => setName(e.target.value)}
                         value={name}
+                        className={classes.input}
                     />
+                    <Typography variant="h6" color="initial" className={classes.label}>Emaiil</Typography>
                     <TextField
                         id="standard-full-width"
-                        label="Email"
                         placeholder="Escibe aqui tu Nombre"
                         InputLabelProps={{
                             shrink: true,
                         }}
                         onChange={e => setEmail(e.target.value)}
                         value={email}
+                        className={classes.input}
                     />
+                    <Typography variant="h6" color="initial" className={classes.label}>Password</Typography>
                     <TextField
                         id="standard-full-width"
-                        label="password"
                         placeholder="Escibe aqui tu Contraseña"
                         type="password"
                         InputLabelProps={{
@@ -137,9 +142,10 @@ const Login = (props) => {
                         }}
                         onChange={e => setPassword(e.target.value)}
                         value={password}
+                        className={classes.input}
                     />
 
-                    <Button type='submit' variant='contained' color='primary'>Continuar</Button>
+                    <Button type='submit' variant='contained' color='primary' className={classes.btn}>Continuar</Button>
                 </form>
             </div>
         </div>

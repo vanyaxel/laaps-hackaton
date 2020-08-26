@@ -9,13 +9,13 @@ import './App.css';
 import InitView from "./components/auth/InitView/InitView";
 import Login from "./components/auth/Login/Login";
 import Profile from "./components/auth/Profile/Profile";
-import Payment from './components/auth/Payment/Payment';
 import Dashboard from "./components/CurrentService/Dashboard";
 import Payment from "./components/auth/Payment/Payment";
 import CreditCardView from "./components/auth/Payment/CreditCard";
 import ServiceForm from './components/auth/ServiceConfig/ServiceForm';
 import Mapbox from './mapbox/Mapbox';
 import PreviousServices from './components/PreviousServices/PreviousServices';
+import SpecificService from "./components/PreviousServices/SpecificService";
 
 function App(props) {
 
@@ -55,8 +55,8 @@ function App(props) {
           <Route path='/serviceform'>
             <ServiceForm />
           </Route>
-          <Route path='/mapbox' >
-            <Mapbox />
+          <Route path='/specific-service' >
+            <SpecificService />
           </Route>
           <Route path='/previous-services' >
             <PreviousServices />
