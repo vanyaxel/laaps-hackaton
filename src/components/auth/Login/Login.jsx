@@ -5,6 +5,8 @@ import { Alert, AlertTitle } from '@material-ui/lab';
 import { auth, db } from '../../../firebase';
 import { withRouter } from 'react-router-dom';
 import NavbarLogin from '../Navbars/NavbarLogin';
+import ArrowBackIos from '@material-ui/icons/ArrowBackIos';
+
 import '../register.css';
 
 const Login = (props) => {
@@ -92,7 +94,7 @@ const Login = (props) => {
 
     return (
         <div>
-            <NavbarLogin title='Registro' view='1/3' link='/' exact />
+            <NavbarLogin title='Registro' view='1/3' link='/' exact icon={<ArrowBackIos />} />
             <div >
                 <form className='form-container' autoComplete="off" onSubmit={verifyUser}>
                     {

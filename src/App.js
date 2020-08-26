@@ -10,8 +10,9 @@ import InitView from "./components/auth/InitView/InitView";
 import Login from "./components/auth/Login/Login";
 import Profile from "./components/auth/Profile/Profile";
 import Payment from './components/auth/Payment/Payment';
-import Dashboard from "./components/Service/Dashboard";
+import Dashboard from "./components/CurrentService/Dashboard";
 import Mapbox from './mapbox/Mapbox';
+import PreviousServices from './components/PreviousServices/PreviousServices';
 
 function App(props) {
 
@@ -50,6 +51,9 @@ function App(props) {
           </Route>
           <Route path='/mapbox' >
             <Mapbox />
+          </Route>
+          <Route path='/previous-services' >
+            <PreviousServices />
           </Route>
         </Switch>
       </Router>

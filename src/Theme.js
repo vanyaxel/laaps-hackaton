@@ -18,6 +18,12 @@ const theme = createMuiTheme({
     },
     typography: {
         fontFamily: ['Open Sans', 'sans-serif'].join(', '),
+        h6: {
+            fontSize: '17px'
+        },
+        body2: {
+            fontSize: '12px'
+        }
     },
 
     shape: {

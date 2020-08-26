@@ -8,6 +8,8 @@ import Button from '@material-ui/core/Button';
 import '../register.css';
 import ModalProfile from './ModalProfile';
 import NavbarLogin from '../Navbars/NavbarLogin';
+import ArrowBackIos from '@material-ui/icons/ArrowBackIos';
+
 
 
 const Profile = (props) => {
@@ -51,7 +53,7 @@ const Profile = (props) => {
 
     return (
         <div>
-            <NavbarLogin title='Detalles del auto' view='2/3' link='/login' />
+            <NavbarLogin title='Detalles del auto' view='2/3' link='/login' icon={<ArrowBackIos />} />
             <div>
                 <form onSubmit={handleSubmit} className='form-container'>
                     <TextField
