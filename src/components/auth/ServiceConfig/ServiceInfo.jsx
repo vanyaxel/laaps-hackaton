@@ -2,17 +2,16 @@ import React from "react";
 import { auth } from '../../../firebase';
 import InfoButton from "./InfoButton";
 import Mapbox from "../../../mapbox/Mapbox";
+import './ServiceInfo.css'
 
 const ServiceInfo = () => {
 
     const user = (auth.currentUser);
 
     return (
-        <div>
-            <h1 className="userInfo"> Para: {user.email}</h1>
-       <div>
+        <div className="mapContainer">
+            <p className="userInfo"> {user.email} </p>
        <Mapbox></Mapbox>
-       </div>
        <InfoButton></InfoButton>
         </div>
     )

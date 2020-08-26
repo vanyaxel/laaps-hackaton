@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter, Link } from 'react-router-dom';
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
@@ -21,9 +22,12 @@ export default function ModalService() {
   };
 
   const dialogStyle = {
-      backgroundColor: '#BCE5DF',
       display: 'block',
       alignContent: 'center'
+  }
+
+  const babyInput = {
+    backgroundColor: 'white',
   }
 
   const serviceButton = {
@@ -76,9 +80,10 @@ export default function ModalService() {
               />
               <TextField
                 aria-label="minimum height"
-                variant="filled"
+                variant="outlined"
                 multiline
-                rowsMin={3}
+                style={babyInput}
+                rowsMin={4}
                 borderradius={16}
                 border={1}
                 placeholder="Escriba su solicitud"
@@ -88,8 +93,9 @@ export default function ModalService() {
         </DialogContent>
         <DialogActions
         style={dialogStyle}>
+          <Link to="/confirm">
           <Button
-            onClick={handleClose}
+            type="submit"
             variant="contained"
             color="primary"
             fullWidth
@@ -98,6 +104,7 @@ export default function ModalService() {
           >
             CONFIRMAR SERVICIO
           </Button>
+          </Link>
         </DialogActions>
       </Dialog>
     </div>
