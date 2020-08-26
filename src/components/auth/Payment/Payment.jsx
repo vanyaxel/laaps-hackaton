@@ -6,28 +6,22 @@ import Button from '@material-ui/core/Button';
 const Payment = (props) => {
   return (
     <div>
-        <div>
+      <div>
         <NavbarLogin title="Método de pago" view="3/3" link="/profile" />
-        </div>
-            <form>
-          <p> Elegir método de pago </p>
-          <Link to ='/creditcard' >
-          <Button
-            variant="outlined"
-            color="primary"
-            type="submit"
-          >
+      </div>
+      <form>
+        <p> Elegir método de pago </p>
+        <Link to="/creditcard">
+          <Button variant="filled" color="primary" type="submit">
             Tarjeta de Crédito o Débito
           </Button>
-          </Link>
-          <Button
-            variant="outlined"
-            color="secondary"
-            type="submit"
-          >
+        </Link>
+        <Link to="/paypal"> <br/>
+          <Button variant="filled" color="secondary" type="submit">
             PayPal
           </Button>
-        </ form>
+        </Link>
+      </form>
     </div>
   );
 };

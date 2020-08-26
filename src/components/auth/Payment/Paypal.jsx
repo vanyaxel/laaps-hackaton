@@ -7,8 +7,7 @@ import Input from '@material-ui/core/Input';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import FormControl from '@material-ui/core/FormControl';
 import { makeStyles } from '@material-ui/core/styles';
-import CreditCardIcon from '@material-ui/icons/CreditCard';
-import DateRangeIcon from '@material-ui/icons/DateRange';
+import AccountBoxIcon from '@material-ui/icons/AccountBox';
 import SecurityIcon from '@material-ui/icons/Security';
 import './CreditCard.css'
 
@@ -19,46 +18,31 @@ const useStyles = makeStyles((theme) => ({
   }));
 
 
-const CreditCardView = (props) => {
+const Paypal = (props) => {
 
     const classes = useStyles();
 
   return (
     <div>
         <div>
-        <NavbarLogin title="Agregar Tarjeta" view="3/3" link="/payment" />
+        <NavbarLogin title="Agregar PayPal" view="3/3" link="/payment" />
         </div>
         <form className='form-container'>
-        <FormControl className={classes.margin}>
-        <InputLabel htmlFor="input-with-icon-adornment">No. de tarjeta</InputLabel>
+      <FormControl className={classes.margin}>
+        <InputLabel>Correo PayPal</InputLabel>
         <Input
           className="numberIn"
-          type="number"
           startAdornment={
             <InputAdornment position="start">
-              <CreditCardIcon />
+              <AccountBoxIcon />
             </InputAdornment>
           }
         />
       </FormControl>
       <FormControl className={classes.margin}>
-        <InputLabel>Fecha de vencimiento</InputLabel>
+        <InputLabel>Contraseña</InputLabel>
         <Input
           className="numberIn"
-          placeholder="MM/AA"
-          type="number"
-          startAdornment={
-            <InputAdornment position="start">
-              <DateRangeIcon />
-            </InputAdornment>
-          }
-        />
-      </FormControl>
-      <FormControl className={classes.margin}>
-        <InputLabel>Código de seguridad</InputLabel>
-        <Input
-          className="numberIn"
-          type="number"
           startAdornment={
             <InputAdornment position="start">
               <SecurityIcon />
@@ -72,4 +56,4 @@ const CreditCardView = (props) => {
 )
 };
 
-export default withRouter(CreditCardView);
+export default withRouter(Paypal);

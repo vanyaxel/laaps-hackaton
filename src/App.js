@@ -11,7 +11,9 @@ import Login from "./components/auth/Login/Login";
 import Profile from "./components/auth/Profile/Profile";
 import Payment from "./components/auth/Payment/Payment";
 import CreditCardView from "./components/auth/Payment/CreditCard";
+import Paypal from "./components/auth/Payment/Paypal";
 import ServiceForm from './components/auth/ServiceConfig/ServiceForm';
+import ConfirmPay from './components/auth/ServiceConfig/ConfirmPay'
 import Mapbox from './mapbox/Mapbox';
 
 function App(props) {
@@ -49,8 +51,14 @@ function App(props) {
           <Route path='/creditcard'>
             <CreditCardView />
           </Route>
+          <Route path='/paypal'>
+            <Paypal />
+          </Route>
           <Route path='/serviceform'>  
             <ServiceForm />
+          </Route>
+          <Route path='/confirm'>
+            <ConfirmPay />
           </Route>
           <Route path='/mapbox' >
             <Mapbox />

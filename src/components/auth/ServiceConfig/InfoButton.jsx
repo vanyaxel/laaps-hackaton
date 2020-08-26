@@ -1,17 +1,12 @@
 import React from "react";
 import ModalService from "./ModalService"
-import Typography from '@material-ui/core/Typography';
+import "./ServiceInfo.css"
 
 const InfoButton = () => {
 
-    const ValidateService = () => {
-
-    }
     return (
-        <div>
-            <Typography 
-            variant="h5" 
-            gutterBottom> Tenemos -- lavadores en tu zona </Typography>
+        <div className="infos">
+            <p> Tenemos -- lavadores en tu zona </p>
             <ModalService></ModalService>
         </div>
     )
