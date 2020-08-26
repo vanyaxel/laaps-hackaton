@@ -1,15 +1,13 @@
 import React from "react";
-import ModalService from "./ModalService";
 import Typography from '@material-ui/core/Typography';
+import ModalService from "./ModalService";
+import "./ServiceInfo.css";
 
 
 const InfoButton = () => {
-    const ValidateService = () => {
 
-    };
     return (
-        <div >
-
+        <div className="infos">
             <ModalService></ModalService>
         </div>
     );

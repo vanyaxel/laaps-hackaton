@@ -42,7 +42,7 @@ export default function ModalService() {
 
   const babyInput = {
     backgroundColor: 'white',
-  }
+  };
 
   const serviceButton = {
     width: '70%'
@@ -106,17 +106,17 @@ export default function ModalService() {
           </DialogContentText>
         </DialogContent>
         <DialogActions
-        style={dialogStyle}>
+          style={dialogStyle}>
           <Link to="/confirm">
-          <Button
-            type="submit"
-            variant="contained"
-            color="primary"
-            fullWidth
-            fullHeight
-            autoFocus
-          >
-            CONFIRMAR SERVICIO
+            <Button
+              type="submit"
+              variant="contained"
+              color="primary"
+              fullWidth
+              fullHeight
+              autoFocus
+            >
+              CONFIRMAR SERVICIO
           </Button>
           </Link>
         </DialogActions>
