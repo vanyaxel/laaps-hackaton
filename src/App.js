@@ -11,6 +11,7 @@ import Login from "./components/auth/Login/Login";
 import Profile from "./components/auth/Profile/Profile";
 import Payment from './components/auth/Payment/Payment';
 import Dashboard from "./components/Service/Dashboard";
+import Mapbox from './mapbox/Mapbox';
 
 function App(props) {
 
@@ -46,6 +47,9 @@ function App(props) {
           </Route>
           <Route path='/dashboard' >
             <Dashboard />
+          </Route>
+          <Route path='/mapbox' >
+            <Mapbox />
           </Route>
         </Switch>
       </Router>
