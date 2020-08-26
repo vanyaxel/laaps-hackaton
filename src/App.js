@@ -12,7 +12,7 @@ import Profile from "./components/auth/Profile/Profile";
 import Dashboard from "./components/CurrentService/Dashboard";
 import Payment from "./components/auth/Payment/Payment";
 import CreditCardView from "./components/auth/Payment/CreditCard";
-import ServiceForm from './components/auth/ServiceConfig/ServiceForm';
+import ServiceForm from './components/CurrentService/CurrentService/ServiceForm';
 import Mapbox from './mapbox/Mapbox';
 import PreviousServices from './components/PreviousServices/PreviousServices';
 import SpecificService from "./components/PreviousServices/SpecificService";
@@ -60,6 +60,9 @@ function App(props) {
           </Route>
           <Route path='/previous-services' >
             <PreviousServices />
+          </Route>
+          <Route path='/dashboard' >
+            <Dashboard />
           </Route>
         </Switch>
       </Router>
