@@ -10,6 +10,7 @@ import InitView from "./components/auth/InitView/InitView";
 import Login from "./components/auth/Login/Login";
 import Profile from "./components/auth/Profile/Profile";
 import Payment from "./components/auth/Payment/Payment";
+import CreditCardView from "./components/auth/Payment/CreditCard";
 import ServiceForm from './components/auth/ServiceConfig/ServiceForm';
 import Dashboard from "./components/Service/Dashboard";
 
@@ -44,6 +45,9 @@ function App(props) {
           </Route>
           <Route path='/payment' >
             <Payment />
+          </Route>
+          <Route path='/creditcard'>
+            <CreditCardView />
           </Route>
           <Route path='/serviceform'>  
             <ServiceForm />

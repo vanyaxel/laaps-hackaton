@@ -1,27 +1,28 @@
 import React, { Component } from 'react';
-import { Map, GoogleApiWrapper } from 'google-maps-react';
+import ReactMapGL from 'react-map-gl';
 
-const mapStyles = {
-  width: '90%',
-  height: '35%'
-};
-
-export class MapContainer extends Component {
-  render() {
+class Map extends Component {
+  state = {
+    viewport: {
+      width: "100vw",
+      height: "45vh",
+      latitude: 19.42847,
+      longitude: -99.12766,
+      zoom: 16
+    }
+  };
+  render(){
     return (
-      <Map
-        google={this.props.google}
-        zoom={14}
-        style={mapStyles}
-        initialCenter={{
-         lat: 19.42847,
-         lng: -99.12766
-        }}
-      />
-    );
-  }
+    <div>
+      <ReactMapGL
+      {...this.state.viewport} 
+      mapStyle="mapbox://styles/mapbox/outdoors-v11"
+      onViewportChange={(viewport => this.setState(viewport))} 
+      mapboxApiAccessToken='pk.eyJ1IjoibWFyYW11bGF0byIsImEiOiJja2VhOGNtcXoyZHhkMnNwOG0xMTNjNmd5In0.ORehNnJ51xmK1KgnV-bdlA'>
+      </ReactMapGL>
+    </div>
+  )
+}
 }
 
-export default GoogleApiWrapper({
-  apiKey: 'AIzaSyBwEcxdSzBifUl2sTJt63Y1kh4cbXWOM2Q'
-})(MapContainer);
+export default Map;
