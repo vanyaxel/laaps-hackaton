@@ -1,9 +1,21 @@
 .form-container{
-    display: flex;
     flex-direction: column;
-    height: 100vh;
-    align-items: center;
+    align-items: end;
     justify-content: center;
+    position: relative;
+    top: 100px;
+    left: 35px;
+}
+
+.form-container-profile{
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    position: relative;
+    top: 35px;
+    left: 35px;
+    width: 335px;
+
 }
 
 .MuiFormControl-root{

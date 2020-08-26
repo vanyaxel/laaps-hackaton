@@ -6,3 +6,7 @@
     background-color: aliceblue;
     border-radius: 8px;
 }
+
+.payment{
+    display: flex;
+}
